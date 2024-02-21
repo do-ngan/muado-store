@@ -38,7 +38,7 @@ export const Inventory = ({ inventory, dispatch, favorites }) => {
           }`}
           onClick={() => toggleFavorite(inventoryItem)}
         ></i>
-        <h3>{name}</h3>
+        <h3 className="itemName">{name}</h3>
         <h3 className="price">${price}</h3>
         <button
           onClick={() => onClickHandler(inventoryItem)}

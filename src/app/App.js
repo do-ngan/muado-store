@@ -8,7 +8,8 @@ import { Favorites } from "../features/favorite/Favorite";
 import Slider from "../components/MainPage/Slider";
 import Banner from "../components/banner/Banner";
 import Wrapper from "../components/wrapper/Wrapper";
-import Footer from "../common/footer/Footer";
+import Footer from "../components/footer/Footer.js";
+import { Box } from "../components/announceBox/Box.js";
 
 export const App = ({ state, dispatch }) => {
   return (
@@ -42,6 +43,22 @@ export const App = ({ state, dispatch }) => {
 
           <Route path="/favorites" exact>
             <Favorites favorites={state.favorites} dispatch={dispatch} />
+          </Route>
+
+          <Route path="/men" exact>
+            <Box desc="Men's" />
+          </Route>
+
+          <Route path="/woman" exact>
+            <Box desc="Woman's" />
+          </Route>
+
+          <Route path="/kids" exact>
+            <Box desc="Kids" />
+          </Route>
+
+          <Route path="/jeans" exact>
+            <Box desc="Jeans" />
           </Route>
         </Switch>
 

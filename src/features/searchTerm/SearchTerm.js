@@ -30,7 +30,7 @@ export const SearchTerm = (props) => {
         <img id="logo" src={logo} alt="" />
       </Link>
 
-      <ul className="f_flex capitalize">
+      <ul className="f_flex capitalize nav">
         {/*<ul className='link f_flex uppercase {MobileMenu ? "nav-links-MobileMenu" : "nav-links"} onClick={() => setMobileMenu(false)}'>*/}
         <li>
           <Link to="/home">home</Link>

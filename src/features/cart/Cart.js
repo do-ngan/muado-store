@@ -1,13 +1,12 @@
-import React from 'react';
-import { calculateTotal } from '../../utilities/utilities.js';
-import { changeItemQuantity } from './cartSlice.js';
+import { calculateTotal } from "../../utilities/utilities.js";
+import { changeItemQuantity } from "./cartSlice.js";
 
 export const Cart = (props) => {
   const { cart, currencyFilter, dispatch } = props;
 
   const onInputChangeHandler = (name, input) => {
     // If the user enters a bad value...
-    if (input === '') {
+    if (input === "") {
       return;
     }
 
@@ -23,14 +22,13 @@ export const Cart = (props) => {
   const total = calculateTotal(cart, currencyFilter);
 
   return (
-    <div id="cart-container">
-      <ul id="cart-items">{cartElements}</ul>
-      <h3 className="total">
-        Total{' '}
-        <span className="total-value">
-          ${total} 
-        </span>
-      </h3>
+    <div className="announce_box">
+      <div className="announce_box_cart">
+        <ul id="cart-items">{cartElements}</ul>
+        <h3 className="total">
+          Total <span className="total-value">${total}</span>
+        </h3>
+      </div>
     </div>
   );
 

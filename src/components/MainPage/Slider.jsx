@@ -11,11 +11,11 @@ const Home = () => {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // autoplay: true
+    autoplay: true,
   };
   return (
     <>
-      <section className="">
+      <section>
         <Slider {...settings}>
           {Sdata.map((value, index) => {
             return (
